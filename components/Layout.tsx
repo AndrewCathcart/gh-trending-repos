@@ -27,8 +27,8 @@ const Layout: FC<Props> = ({ children, title }) => {
       {/* Navbar */}
       <div className="flex flex-col h-screen">
         <header className="top-0 z-50 bg-white border-b shadow-sm">
-          <div className="flex justify-between max-w-6xl mx-auto space-x-4 md:max-w-4xl sm:max-w-2xl">
-            <EyeIcon className="relative flex-shrink-0 my-2 w-22 md:inline-grid h-11" />
+          <div className="flex justify-between max-w-4xl mx-auto space-x-4">
+            <EyeIcon className="pl-2 my-2 w-22 h-11" />
 
             <nav className="flex items-center justify-end px-4 space-x-4">
               <Link href="/">
