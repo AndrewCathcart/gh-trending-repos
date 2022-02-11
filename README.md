@@ -1,5 +1,7 @@
 # gh-trending-repos
 
+https://gh-trending-repos.vercel.app/
+
 A simple app to discover trending repositories and save them for later.
 
 ## Prerequisites
