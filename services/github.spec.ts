@@ -46,5 +46,14 @@ describe('github', () => {
       const expected = `https://api.github.com/search/repositories?q=language:${language}+created:%3E${christmasDay}&sort=stars&order=desc&page=${pageNum}&per_page=${perPage}`;
       expect(actual).toEqual(expected);
     });
+
+    it('builds the url with a language filter and handles encoding', () => {
+      const language = 'C++';
+
+      const actual = buildRepoSearchURL(language, pageNum, perPage);
+
+      const expected = `https://api.github.com/search/repositories?q=language:C%2B%2B+created:%3E${christmasDay}&sort=stars&order=desc&page=${pageNum}&per_page=${perPage}`;
+      expect(actual).toEqual(expected);
+    });
   });
 });
