@@ -13,7 +13,7 @@ const Layout: FC<Props> = ({ children, title }) => {
   const router = useRouter();
 
   return (
-    <div className="overflow-auto">
+    <div className="w-screen">
       <Head>
         <title>{title}</title>
         <meta charSet="utf-8" />
