@@ -22,11 +22,11 @@ const RepoCard: FC<Props> = ({ item, toggleFavourite }) => {
         </div>
 
         {item.isFavourite ? (
-          <button onClick={() => toggleFavourite(item)}>
+          <button aria-label="unfavourite" onClick={() => toggleFavourite(item)}>
             <SolidHeartIcon className="h-6 text-red-500 duration-150 ease-out cursor-pointer hover:scale-110" />
           </button>
         ) : (
-          <button onClick={() => toggleFavourite(item)}>
+          <button aria-label="favourite" onClick={() => toggleFavourite(item)}>
             <OutlineHeartIcon className="h-6 text-red-500 duration-150 ease-out cursor-pointer hover:scale-110" />
           </button>
         )}
