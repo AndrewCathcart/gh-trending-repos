@@ -12,7 +12,12 @@ const RepoCard: FC<Props> = ({ item, toggleFavourite }) => {
   return (
     <div className="p-4 mb-4 border-2 rounded-lg shadow-sm">
       <div className="flex space-x-2">
-        <a href={item.url} className="font-bold duration-150 ease-out hover:scale-105">
+        <a
+          href={item.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold duration-150 ease-out hover:scale-105"
+        >
           {item.name}
         </a>
 
