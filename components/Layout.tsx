@@ -13,7 +13,7 @@ const Layout: FC<Props> = ({ children, title }) => {
   const router = useRouter();
 
   return (
-    <div className="ml-[calc(100vw - 100%)]">
+    <div className="overflow-auto">
       <Head>
         <title>{title}</title>
         <meta charSet="utf-8" />
