@@ -41,9 +41,7 @@ const useRepos = (language: string, page: number) => {
     };
 
     searchRepos().catch((err) => {
-      if (err.name === 'AbortError') {
-        console.log('fetch aborted');
-      } else {
+      if (err.name !== 'AbortError') {
         setIsLoading(false);
         setError(err.message);
       }
