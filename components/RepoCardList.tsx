@@ -45,20 +45,20 @@ const RepoCardList = () => {
     return <div> An error occurred. </div>;
   }
 
-  // could probably return something better but this will do for now.
-  if (repos.length === 0) {
-    return <div> Could not find any repos. </div>;
-  }
-
   return (
     <div>
       <LanguageFilter selected={language} setLanguage={handleLanguageChange} />
       <ul id="repos">
-        {repos.map((repo, idx) => (
-          <li key={repo.id} data-testid={`repo-${idx}`}>
-            <RepoCard item={repo} toggleFavourite={toggleFavourite} />
-          </li>
-        ))}
+        {repos.length === 0 ? (
+          // could probably return something better but this will do for now.
+          <div>Could not find any repos. </div>
+        ) : (
+          repos.map((repo, idx) => (
+            <li key={repo.id} data-testid={`repo-${idx}`}>
+              <RepoCard item={repo} toggleFavourite={toggleFavourite} />
+            </li>
+          ))
+        )}
       </ul>
       <PaginationButtons page={page} handleChange={handlePageChange} hasNext={hasNext} />
     </div>
